@@ -6,4 +6,15 @@
 .input-window {
     text-align: end;
     font-size: x-large;
+    margin-bottom:2px;
+}
+
+
+.no-gutters .col {
+    margin-right:2px;
+    margin-bottom:2px;
+}
+
+.no-gutters .col:nth-child(3n), .no-gutters .col.first {
+    margin-right:0px;
 }
