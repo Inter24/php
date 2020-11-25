@@ -11,8 +11,42 @@
 <body>
 <div class="container">
     <div class="row game-card align-items-center">
-        <div class="col col-md-4 offset-md-4">
-            <div class="card text-center">
+        <div class="col col-md-6 offset-md-3">
+
+            <div id="accordion" class="show">
+                <h3>Загадайте любое число и я его угадаю!</h3><br>
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">                      
+                        Минимальное знание числа для игры                    
+                    </h5>
+                  </div>              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <input type="text" id="minvalue" value="0">                   
+                    </div>
+                  </div>
+                </div><br><br>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">                      
+                        Максимальное знание числа для игры                     
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <input type="text" id="maxvalue" value="100">
+                    </div>
+                  </div>
+                </div>  <br><br>
+                <button class="btn btn-primary" type="button" id="start">
+                    Начать игру
+                </button>
+            </div>
+
+            
+            <div class="card text-center hide" id="game">
+                <br><h6>Число в диапазоне: от <span id="min"></span> до <span id="max"></span> </h6><br>
                 <div class="card-header">
                     <p class="m-0">Вопрос №<span id="orderNumberField">5</span></p>
                 </div>
@@ -34,6 +68,7 @@
                     <button class="btn btn-link" id="btnRetry">Заново</button>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
